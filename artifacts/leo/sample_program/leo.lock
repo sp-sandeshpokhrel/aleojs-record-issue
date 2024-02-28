@@ -1,0 +1,6 @@
+[[package]]
+name = "token"
+network = "testnet3"
+location = "network"
+checksum = "9fe51f96a6db6da33f297fef1838cff5f69edf23208c0abbf03321a9136d2059"
+dependencies = []
