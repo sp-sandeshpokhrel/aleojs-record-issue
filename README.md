@@ -19,7 +19,9 @@ Compile the programs:
 aleojs-cli-dev compile
 ```
 
-Before running test ensure that devnet is running. This test shows how the issue is happening in the aleo.
+Before running test ensure that aleo devnet is running. And ensure that you put privatekey with name `ALEO_PRIVATE_KEY_TESTNET3` in .env file.
+
+This test shows how the issue is happening in the aleo.
 Run the token.test.ts file:
 
 ```bash
@@ -52,10 +54,10 @@ First the test will deploy the token program and then sample_program. Then
 - Step 2: Then it will call `burntoken` transition function of sample_program by providing the record from step 1 as input. It should return the amount of token provided in record.
 - Step 3: Then it will call `transfer_private` from token program again for the same wallet and amount of 2 with the same record from step 1 as input. And it gives two record as output, one for remaining amount and another for transferred amount.
 
-#### Expected Behaviour
+  #### Expected Behaviour
 
-The expected behaviour is that the record from step 1 should be consumed in step 2 and should not be available for step 3. As the record is consumed in step 2, it should not be available for step 3 to consume again.
+  The expected behaviour is that the record from step 1 should be consumed in step 2 and should not be available for step 3. As the record is consumed in step 2, it should not be available for step 3 to consume again.
 
-#### Actual Behaviour
+  #### Actual Behaviour
 
-The actual behaviour is that the record from step 1 is not consumed in step 2 and is available for step 3 to consume again. So, the record is unspent even when it is input in transition.
+  The actual behaviour is that the record from step 1 is not consumed in step 2 and is available for step 3 to consume again. So, the record is unspent even when it is input in transition.

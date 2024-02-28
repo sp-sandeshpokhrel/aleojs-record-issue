@@ -8,7 +8,7 @@ import { gettoken } from '../artifacts/js/leo2js/token';
 
 const amount = BigInt(2);
 
-const TIMEOUT = 20000_000; // Also overwrite timeout in validateBroadcast in core package
+const TIMEOUT = 20000_000; // Also overwrite timeout in validateBroadcast in aleo/core package
 const tokenContract = new TokenContract({ mode: 'execute' });
 const sample_program = new Sample_programContract({ mode: 'execute' });
 const admin = aleoConfig.accounts[0];
