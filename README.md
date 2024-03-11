@@ -63,4 +63,4 @@ First the test will deploy the token program and then sample_program. Then
   The actual behaviour is that the record from step 1 is not consumed in step 2 and is available for step 3 to consume again. So, the record is unspent even when it is input in transition.
 
 
-Discord handle: sp_sandesh_54293
+Discord handle: ```sp_sandesh_54293```
